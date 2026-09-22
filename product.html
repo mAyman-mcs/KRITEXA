@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="KRITEXA product photos and specifications.">
+<title id="pageTitle">KRITEXA | Product</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#071a36;--ink-2:#0d2b52;--cyan:#09b9df;--cyan-2:#63e5ff;
+  --bg:#f5f8fc;--card:#fff;--muted:#64748b;--line:#dce5ef;
+  --success:#17b26a;--shadow:0 20px 55px rgba(7,26,54,.10);
+  --radius:18px;--ease:cubic-bezier(.2,.8,.2,1)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(1180px,92%);margin:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#0784a5;font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em}
+.eyebrow:before{content:"";width:25px;height:2px;background:var(--cyan)}
+h1,h2,h3,h4{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.12}
+.section{padding:60px 0 105px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid transparent;border-radius:9px;padding:11px 18px;font-weight:750;font-size:.86rem;cursor:pointer;transition:.25s var(--ease)}
+.btn-primary{background:var(--cyan);color:#032238;box-shadow:0 9px 22px rgba(9,185,223,.22)}
+.btn-primary:hover{background:#00a5ca;transform:translateY(-2px)}
+.btn-outline{border-color:var(--line);color:var(--ink);background:#fff}.btn-outline:hover{border-color:var(--cyan);color:#0089ac}
+
+/* nav */
+.navbar{height:78px;position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(220,229,239,.7)}
+.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:11px}
+.logo img{height:38px;width:auto;object-fit:contain}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links>a{border:0;background:none;color:var(--ink);font-size:.88rem;font-weight:700;cursor:pointer}
+.nav-links>a:hover{color:#0089ac}
+
+/* breadcrumb */
+.breadcrumb{padding:26px 0 0;font-size:.8rem;color:var(--muted)}
+.breadcrumb a{color:#0089ac;font-weight:700}
+
+/* product layout */
+.product-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:start;margin-top:28px}
+.gallery-main{border-radius:20px;background:linear-gradient(145deg,#eaf5fa,#f9fcff);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;min-height:340px;padding:24px;overflow:hidden}
+.gallery-main img{max-width:100%;max-height:480px;object-fit:contain;display:block}
+.gallery-thumbs{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+.gallery-thumbs button{border:2px solid var(--line);background:#fff;border-radius:12px;padding:6px;width:84px;height:64px;cursor:pointer;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:.2s var(--ease)}
+.gallery-thumbs button img{max-width:100%;max-height:100%;object-fit:contain}
+.gallery-thumbs button.active,.gallery-thumbs button:hover{border-color:var(--cyan)}
+.gallery-thumbs span{display:block;font-size:.62rem;text-align:center;color:var(--muted);margin-top:3px}
+
+.product-family{color:#0089ac;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em}
+.product-info h1{font-size:clamp(2rem,3.4vw,2.7rem);margin:10px 0 14px;letter-spacing:-.03em}
+.product-info>p{color:var(--muted);font-size:1rem;max-width:520px}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:26px 0}
+.spec{background:#f5f8fb;border-radius:8px;padding:10px 12px;font-size:.78rem;font-weight:700;color:#52647a}
+.product-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+
+.notice{border:1px dashed var(--line);border-radius:16px;padding:40px;text-align:center;color:var(--muted);background:var(--bg)}
+.notice h2{color:var(--ink);margin-bottom:10px}
+
+/* footer */
+footer{background:#06152b;color:#fff;padding:45px 0 22px;margin-top:80px}
+footer p{color:#879bb2;font-size:.78rem}
+.copyright{border-top:1px solid rgba(255,255,255,.09);padding-top:20px;margin-top:24px;color:#657c96;font-size:.7rem;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* modal (same as index.html) */
+.modal{position:fixed;inset:0;background:rgba(3,14,28,.65);backdrop-filter:blur(7px);display:none;align-items:center;justify-content:center;z-index:2000;padding:20px}.modal.open{display:flex}.modal-card{background:#fff;border-radius:18px;width:min(540px,100%);padding:30px;box-shadow:0 30px 90px rgba(0,0,0,.3);position:relative}.close{position:absolute;right:17px;top:15px;border:0;background:#eef3f7;width:34px;height:34px;border-radius:50%;cursor:pointer}.modal-card h2{font-size:1.65rem;margin-bottom:7px}.modal-card p{font-size:.8rem;color:var(--muted);margin-bottom:20px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:.7rem;font-weight:800;color:#52647a}.field input,.field textarea,.field select{border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit;font-size:.78rem;outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(9,185,223,.1)}.field textarea{min-height:90px;resize:vertical}
+
+@media(max-width:900px){
+ .product-layout{grid-template-columns:1fr}
+ .nav-links{gap:14px}.nav-links>a{font-size:.8rem}
+ .form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="navbar">
+ <div class="container nav-inner">
+  <a class="logo" href="index.html" aria-label="KRITEXA home"><img src="logo.png" alt="KRITEXA"></a>
+  <nav class="nav-links" aria-label="Primary navigation">
+   <a href="index.html#products">All products</a>
+   <button class="btn btn-primary" id="ctaBtn" type="button">Talk to Sales →</button>
+  </nav>
+ </div>
+</header>
+
+<main class="container">
+ <div class="breadcrumb"><a href="index.html#products">Products</a> / <span id="crumbName">…</span></div>
+ <section class="section" id="productRoot"></section>
+</main>
+
+<footer><div class="container">
+ <p>KRITEXA — Networking solutions focused on reliability, innovation and practical performance for SMB and enterprise-edge environments.</p>
+ <div class="copyright"><span>© 2026 KRITEXA. All rights reserved.</span><span>Networking solutions • Made in Egypt 🇪🇬</span></div>
+</div></footer>
+
+<div class="modal" id="modal" aria-hidden="true"><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+ <button class="close" id="closeModal" aria-label="Close">×</button><h2 id="modalTitle">Let's talk about your network.</h2><p>Send your requirements and the KRITEXA team can follow up with the appropriate product or deployment information.</p>
+ <form id="leadForm"><div class="form-grid"><div class="field"><label>First name</label><input required type="text" placeholder="First name"></div><div class="field"><label>Last name</label><input required type="text" placeholder="Last name"></div><div class="field"><label>Business email</label><input required type="email" placeholder="name@company.com"></div><div class="field"><label>Company</label><input type="text" placeholder="Company name"></div><div class="field"><label>Interest</label><select><option>Product information</option><option>Request a demo</option><option>Quotation</option><option>Partner program</option><option>Technical support</option></select></div><div class="field"><label>Preferred product</label><select id="productSelect"><option>Not sure yet</option><option>KX2108GP2S</option><option>KX2124GP4S</option><option>KX5108GP2X</option><option>KX5124G6X</option><option>KX5148GP6X</option><option>KX5124X2C</option></select></div><div class="field full"><label>Tell us about your requirement</label><textarea placeholder="Number of ports, PoE devices, uplink speed, deployment size..."></textarea></div><div class="field full"><button class="btn btn-primary" type="submit">Send request →</button></div></div></form>
+</div></div>
+
+<script>
+const PRODUCTS={
+ KX2108GP2S:{family:"Entry • L2 Managed",desc:"Compact managed access switch for small offices, retail and hospitality deployments.",specs:["8 × 1G Base-T","2 × 1G SFP","PoE","L2 Managed"],images:[
+  {src:"images/KS2108GP2S/KS2108GP2S.png",label:"Product"},
+  {src:"images/KS2108GP2S/KS2108GP2S_small.png",label:"Banner"}
+ ]},
+ KX2124GP4S:{family:"Entry • L2 Managed",desc:"Higher-density PoE access for growing SMB networks and education environments.",specs:["24 × 1G Base-T","4 × 1G SFP","PoE","L2 Managed"],images:[
+  {src:"images/KS2124GP4S/KS2124GP4S.png",label:"Product"},
+  {src:"images/KS2124GP4S/KS2124GP4S_small.png",label:"Banner"}
+ ]},
+ KX5108GP2X:{family:"Mid • L3 Lite",desc:"Flexible access platform with 10G uplinks and advanced routing capabilities.",specs:["8 × 1G Base-T","2 × 10G SFP+","PoE","L3 Lite"],images:[
+  {src:"images/KS5108GP2X/KS5108GP2X_Front.png",label:"Front"},
+  {src:"images/KS5108GP2X/KS5108GP2X_back.png",label:"Back"},
+  {src:"images/KS5108GP2X/KS5108GP2X_Left.png",label:"Left"},
+  {src:"images/KS5108GP2X/KS5108GP2X_right.png",label:"Right"}
+ ]},
+ KX5124G6X:{family:"Advanced • L3",desc:"Enterprise edge and aggregation switching with multiple 10G uplinks.",specs:["24 × 1G Base-T","6 × 10G SFP+","L3 Managed","Aggregation"],images:[
+  {src:"images/KS5124G6X/KS5124G6X front.png",label:"Front"},
+  {src:"images/KS5124G6X/KS5124G6X_back.png",label:"Back"},
+  {src:"images/KS5124G6X/KS5124G6X left.png",label:"Left"},
+  {src:"images/KS5124G6X/KS5124G6X right.png",label:"Right"}
+ ]},
+ KX5148GP6X:{family:"Advanced • L3",desc:"High-density PoE aggregation for enterprise edge and demanding connected environments.",specs:["48 × 1G Base-T","6 × 10G SFP+","PoE","L3 Managed"],images:[
+  {src:"images/KS5148GP6X/KS5148GP6Xfront.png",label:"Front"},
+  {src:"images/KS5148GP6X/KS5148GP6Xback.png",label:"Back"},
+  {src:"images/KS5148GP6X/KS5148GP6Xleft.png",label:"Left"},
+  {src:"images/KS5148GP6X/KS5148GP6Xright.png",label:"Right"}
+ ]},
+ KX5124X2C:{family:"Data Center • Core",desc:"High-bandwidth core switching with 10G server connectivity and 100G uplinks.",specs:["24 × 10G SFP+","2 × 100G QSFP28","Data Center","Built-in PSU"],images:[
+  {src:"images/KX5124X2C/KS5124G6X front.png",label:"Front"}
+ ]}
+};
+
+const code=new URLSearchParams(location.search).get('p');
+const root=document.getElementById('productRoot');
+const crumb=document.getElementById('crumbName');
+const product=code?PRODUCTS[code]:null;
+
+if(product){
+ document.title=`KRITEXA | ${code}`;
+ crumb.textContent=code;
+ root.innerHTML=`
+  <div class="product-layout">
+   <div>
+    <div class="gallery-main"><img id="mainImg" src="${product.images[0].src}" alt="${code} - ${product.images[0].label}"></div>
+    <div class="gallery-thumbs" id="thumbs"></div>
+   </div>
+   <div class="product-info">
+    <span class="product-family">${product.family}</span>
+    <h1>${code}</h1>
+    <p>${product.desc}</p>
+    <div class="specs">${product.specs.map(s=>`<div class="spec">${s}</div>`).join('')}</div>
+    <div class="product-actions">
+     <button class="btn btn-primary" data-modal>Request a demo →</button>
+     <a class="btn btn-outline" href="index.html#products">Back to all products</a>
+    </div>
+   </div>
+  </div>`;
+
+ const mainImg=document.getElementById('mainImg');
+ const thumbs=document.getElementById('thumbs');
+ product.images.forEach((img,i)=>{
+  const b=document.createElement('button');
+  b.type='button';
+  b.className=i===0?'active':'';
+  b.innerHTML=`<img src="${img.src}" alt="${code} - ${img.label} thumbnail">`;
+  b.addEventListener('click',()=>{
+   mainImg.src=img.src;
+   mainImg.alt=`${code} - ${img.label}`;
+   thumbs.querySelectorAll('button').forEach(x=>x.classList.remove('active'));
+   b.classList.add('active');
+  });
+  thumbs.appendChild(b);
+ });
+}else{
+ const label=code||'This product';
+ document.title='KRITEXA | Product photos coming soon';
+ crumb.textContent=code||'Product';
+ root.innerHTML=`
+  <div class="notice">
+   <h2>Photos coming soon</h2>
+   <p>We don't have photos published for ${label} yet. Reach out to our team for datasheets and images in the meantime.</p>
+   <div class="product-actions" style="justify-content:center;margin-top:20px">
+    <button class="btn btn-primary" data-modal>Talk to Sales →</button>
+    <a class="btn btn-outline" href="index.html#products">Back to all products</a>
+   </div>
+  </div>`;
+}
+
+const modal=document.getElementById('modal'), closeModal=document.getElementById('closeModal');
+function openModal(product=''){
+ modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+ if(product)document.getElementById('productSelect').value=product;
+}
+function close(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}
+document.getElementById('ctaBtn').addEventListener('click',()=>openModal(code||''));
+document.addEventListener('click',e=>{
+ const btn=e.target.closest('[data-modal]');
+ if(btn){e.preventDefault();openModal(code||'')}
+});
+closeModal.addEventListener('click',close);
+modal.addEventListener('click',e=>{if(e.target===modal)close()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+
+document.getElementById('leadForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const form=e.currentTarget;
+ const button=form.querySelector('button[type=submit]');
+ button.textContent='Request received ✓';button.disabled=true;
+ setTimeout(()=>{form.reset();button.textContent='Send request →';button.disabled=false;close()},1200);
+});
+</script>
+</body>
+</html>
