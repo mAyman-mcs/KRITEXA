@@ -44,10 +44,10 @@ h1,h2,h3,h4{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.12}
 .logo img{height:38px;width:auto;object-fit:contain}
 .logo-mark{display:none}
 .nav-links{display:flex;align-items:center;gap:30px;list-style:none}
-.nav-links>a,.nav-drop>button{border:0;background:none;color:var(--ink);font-size:.88rem;font-weight:700;cursor:pointer;padding:27px 0;display:flex;align-items:center;gap:6px}
-.nav-links>a:hover,.nav-drop>button:hover{color:#0089ac}
+.nav-links>a,.nav-drop>a{border:0;background:none;color:var(--ink);font-size:.88rem;font-weight:700;cursor:pointer;padding:27px 0;display:flex;align-items:center;gap:6px}
+.nav-links>a:hover,.nav-drop>a:hover{color:#0089ac}
 .nav-drop{position:relative}
-.nav-drop>button:after{content:"⌄";font-size:13px;transition:.2s}.nav-drop:hover button:after{transform:rotate(180deg)}
+.nav-drop>a:after{content:"⌄";font-size:13px;transition:.2s}.nav-drop:hover>a:after{transform:rotate(180deg)}
 .dropdown{position:absolute;top:68px;left:50%;transform:translate(-50%,10px);width:650px;padding:26px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 25px 65px rgba(7,26,54,.16);display:grid;grid-template-columns:1fr 1fr;gap:25px;opacity:0;visibility:hidden;transition:.22s var(--ease)}
 .nav-drop:hover .dropdown{opacity:1;visibility:visible;transform:translate(-50%,0)}
 .dropdown h4{font-family:Inter;font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;color:#8a98aa;margin-bottom:12px}
@@ -163,7 +163,7 @@ footer{background:#06152b;color:#fff;padding:65px 0 22px}.footer-grid{display:gr
  .announcement .inner{font-size:.68rem;text-align:center;padding:7px 0}.navbar{height:67px}
  .nav-links,.nav-actions{display:none}.menu-btn{display:block}
  .mobile-open .nav-links{display:flex;position:absolute;left:4%;right:4%;top:67px;background:#fff;border:1px solid var(--line);border-radius:13px;padding:13px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}
- .mobile-open .nav-links>a,.mobile-open .nav-drop>button{padding:13px}.dropdown{display:none!important}
+ .mobile-open .nav-links>a,.mobile-open .nav-drop>a{padding:13px}.mobile-open .nav-drop>a:after{content:none}.dropdown{display:none!important}
  .hero{min-height:auto}.hero-copy h1{font-size:3rem}.hero-visual{min-height:350px}.floating-chip{left:0;top:25px}.status-card{right:0;bottom:5px}
  .proof-grid{grid-template-columns:1fr 1fr}.proof-item{padding:18px 14px}.proof-item:nth-child(2){border-right:0}.proof-item:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.1)}
  .section{padding:75px 0}.solution-grid,.product-grid,.resources{grid-template-columns:1fr}
@@ -183,13 +183,13 @@ footer{background:#06152b;color:#fff;padding:65px 0 22px}.footer-grid{display:gr
  <div class="container nav-inner">
   <a class="logo" href="#home" aria-label="KRITEXA home"><img src="images/Artboard 3-8.png" alt="KRITEXA"></a>
   <nav class="nav-links" aria-label="Primary navigation">
-   <div class="nav-drop"><button type="button">Solutions</button><div class="dropdown">
+   <div class="nav-drop"><a href="#solutions">Solutions</a><div class="dropdown">
     <div><h4>By industry</h4><a href="#solutions"><span>🏢</span><div><b>Enterprise Branch</b><br>Secure distributed offices</div></a><a href="#solutions"><span>🏫</span><div><b>Education & Campus</b><br>Reliable high-density access</div></a><a href="#solutions"><span>🛍️</span><div><b>Retail & Hospitality</b><br>Connected customer experiences</div></a></div>
     <div><h4>By requirement</h4><a href="#solutions"><span>⚡</span><div><b>High-speed uplinks</b><br>10G and 100G-ready designs</div></a><a href="#solutions"><span>🔌</span><div><b>PoE+ deployment</b><br>Power APs, cameras and phones</div></a><a href="#solutions"><span>🛡️</span><div><b>Network security</b><br>VLAN, QoS, STP and more</div></a></div>
    </div></div>
-   <div class="nav-drop"><button type="button">Products</button><div class="dropdown">
-    <div><h4>Access</h4><a href="#products"><span>▦</span><div><b>KX2108GP2S</b><br>8-port PoE access</div></a><a href="#products"><span>▦</span><div><b>KX2124GP4S</b><br>24-port PoE access</div></a><a href="#products"><span>▦</span><div><b>KX5108GP2X</b><br>10G uplink access</div></a></div>
-    <div><h4>Aggregation & core</h4><a href="#products"><span>◫</span><div><b>KX5124G6X</b><br>24-port aggregation</div></a><a href="#products"><span>◫</span><div><b>KX5148GP6X</b><br>48-port PoE aggregation</div></a><a href="#products"><span>◫</span><div><b>KX5124X2C</b><br>Data center core</div></a></div>
+   <div class="nav-drop"><a href="#products">Products</a><div class="dropdown">
+    <div><h4>Access</h4><a href="product.html?p=KX2108GP2S"><span>▦</span><div><b>KX2108GP2S</b><br>8-port PoE access</div></a><a href="product.html?p=KX2124GP4S"><span>▦</span><div><b>KX2124GP4S</b><br>24-port PoE access</div></a><a href="product.html?p=KX5108GP2X"><span>▦</span><div><b>KX5108GP2X</b><br>10G uplink access</div></a></div>
+    <div><h4>Aggregation & core</h4><a href="product.html?p=KX5124G6X"><span>◫</span><div><b>KX5124G6X</b><br>24-port aggregation</div></a><a href="product.html?p=KX5148GP6X"><span>◫</span><div><b>KX5148GP6X</b><br>48-port PoE aggregation</div></a><a href="product.html?p=KX5124X2C"><span>◫</span><div><b>KX5124X2C</b><br>Data center core</div></a></div>
    </div></div>
    <a href="#why">Why KRITEXA</a><a href="#resources">Resources</a><a href="#egypt">Made in Egypt</a>
   </nav>
