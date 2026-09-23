@@ -17,7 +17,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 button{font:inherit}
 .container{width:min(1180px,92%);margin:auto}
@@ -75,6 +75,15 @@ footer p{color:#879bb2;font-size:.78rem}
  .product-layout{grid-template-columns:1fr}
  .nav-links{gap:14px}.nav-links>a{font-size:.8rem}
  .form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+}
+@media(max-width:720px){
+ .navbar{height:67px}.logo img{height:30px}
+ .nav-links>a{display:none}.nav-links .btn{padding:9px 13px;font-size:.78rem}
+ .section{padding:40px 0 70px}
+ .gallery-main{min-height:220px;padding:16px}
+ .gallery-thumbs button{width:68px;height:54px}
+ .product-actions{flex-direction:column;align-items:stretch}
+ .notice{padding:26px 18px}
 }
 </style>
 </head>
